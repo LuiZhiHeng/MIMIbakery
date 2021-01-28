@@ -1,0 +1,204 @@
+
+    /** HOME Style **/
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        background-color: white;
+        background-image: url("../img/bg.jpg");
+        /*https://image.freepik.com/free-vector/sweet-pastry-seamless-pattern-illustration-cakes-bakery-pastry-pastry-dessert-background-with-sweet-cake-vanilla-cream-cupcake-caramel-muffin-chocolates-donut_109709-594.jpg*/
+        font-family: Helvetica, Arial, sans-serif;
+        display: block;
+        text-align: center;
+    }
+
+    /** Header **/
+
+    header {
+        background-color: rgb(63, 33, 9);
+        position: fixed;
+        width: 100%;
+        height: 80px;
+        z-index: 520;
+    }
+
+    .logo img{
+        width: 100px;
+        position: fixed;
+        top: 10px;
+        left: 3%;
+        float: left;
+    }
+
+    a.profile {
+        color: white;
+        position: fixed;
+        top: 30px;
+        right: 20px;
+        text-decoration: none;
+    }
+
+    .profile img {
+        width: 15px;
+        position: fixed;
+        top: 30px;
+        right: 80px;
+    }
+
+    header nav {
+        position: relative;
+        top: 38%;
+    }
+
+    header li {
+        display: inline-block;
+    }
+
+    header nav a {
+        list-style-type: none;
+        text-decoration: none;
+        padding: 5px 10px;
+        color: rgba(255, 255, 255);
+    }
+
+    /** Aside **/
+
+    aside {
+        background-color: rgb(184, 119, 44);
+        position: fixed;
+        top: 100px;
+        right: 1%;
+        width: 120px;
+        border-radius: 10px;
+        box-shadow: inset 0 0 2em rgba(0,0,0,0.1), 
+                    0 0 0 2px rgb(255,255,255), 
+                    0.3em 0.3em 1em rgba(0,0,0,0.3);
+        padding: 15px;
+        text-align: left;
+        animation: comeout 3s forwards;
+    }
+
+    @keyframes comeout {
+        from {
+            margin-right: -150px;
+        } to {
+            margin-right: 0;
+        }
+    }
+
+    aside#OrderNow {
+        top: 100px;
+    }
+
+    aside#FeedBackForm {
+        top: 200px;
+        font-size: 15px;
+    }
+
+    aside a{
+        text-decoration: none;
+        color: rgb(255, 230, 0);
+    }
+
+    aside h4 {
+        color: rgb(255, 252, 102);
+        padding-bottom: 5px;
+        margin-bottom: 5px;
+        padding-top: 5px;
+        border-bottom: 1px solid white;
+        text-align: center;
+    }
+
+    aside ul li {
+        list-style-type: disc;
+        list-style-position: inside;
+        padding-left: 20px;
+    }
+
+    aside ul li a {
+        text-decoration: none;
+        text-align: left;
+        line-height: 1.5em;
+        color: rgb(219, 219, 219);
+    }
+
+    /** Section **/
+
+    section {
+        background-color: #f3f3f2;
+        margin: 0 auto;
+        width: 78%;
+        height: 100%;
+        padding: 40px;
+        position: relative;
+        top: 20px;
+        text-align: center;
+    }
+
+    section img {
+        width: 100%;
+        box-shadow: inset 0 0 3em rgba(0,0,0,0.1), 
+                    0.3em 0.3em 1em rgba(0,0,0,0.3);
+    }
+
+    section > img {
+        position: relative;
+        animation-name: appear;
+        animation-duration: 4s;  
+        animation-fill-mode: forwards;
+    }
+
+    @keyframes appear {
+        
+        from {
+            top: -100px;
+            opacity: 0.4;
+        }
+        to {
+            top: 0px;
+            opacity: 1;
+        }
+      }
+
+    h1 {
+        color: rgb(148, 68, 15);
+        font-size: 2em;
+        margin-top: 20px;
+        text-align: left;
+    }
+
+    h2 {
+        color: rgb(148, 68, 15);
+        font-size: 2em;
+        margin-top: 20px;
+        text-align: left;
+        border-bottom: 1px solid;
+    }
+
+    h3 {
+        color: rgb(190, 112, 93);
+        font-size: 2em;
+        padding: 30px 5px;
+        margin-bottom: 20px;
+        border-top: 1px solid gray;
+        border-bottom: 1px solid gray;
+        text-align: center;
+    }
+
+    /** Footer **/
+
+    footer {
+        background-color: rgb(63, 33, 9);
+        position: relative;
+        top: 20px;
+        width: 100%;
+        height: 40px;
+        color: rgb(155, 155, 155);
+    }
+
+    footer p {
+        position: relative;
+        top: 28%;
+    }

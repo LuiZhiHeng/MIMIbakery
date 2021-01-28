@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>MIMI Bakery | Order</title>
+        <link href="css/order.css" rel="stylesheet" />
+    </head>
+
+    <body>
+        <header>
+            <a class="logo" href="index.html" ><img src="img/logo3a.png" /></a>
+            <nav>
+                <ul>
+                    <li><a href="index.html" >HOME</a></li>
+                    <li><a href="shop.html" >SHOP</a></li>
+                    <li><a href="feedback.html" >FEEDBACK</a></li>
+                </ul>
+            </nav>
+            <a class="profile" href="register.html"><img src="img/user.png" alt="profile"> | Login?</a>
+        </header>
+
+        <section>
+            <img src="img/bannerE.png" alt="banner">
+            <h2>Order Form</h2><hr>
+
+            <form id="form_order" method="POST" action="action="mailto:B190049A@sc.edu.my"">
+
+                <!-- Customer Info -->
+                <fieldset class="f_CustomerInfo">
+                    <legend>Customer Information</legend>
+                    <label for="Name">Name <span class="textred">*</span></label>
+                    <input id="Name" type="text" required/>
+
+                    <!--== Address Start -->
+                    <label for="Address">Street Address <span class="textred">*</span></label>
+                    <input id="Address" type="text" required/>
+
+                    <label for="Address2">Street Address 2</label>
+                    <input id="Address2" type="text" />
+
+                    <label for="City">City <span class="textred">*</span></label>
+                    <input id="City" type="text" required/>
+                    
+                    <label for="State">State <span class="textred">*</span></label>
+                    <input id="State" type="text" list="list_state" required/>
+                    <datalist id="list_state">
+                        <option value="Johor"></option>
+                        <option value="Kedah"></option>
+                        <option value="Kelantan"></option>
+                        <option value="Malacca"></option>
+                        <option value="Negeri Sembilan"></option>
+                        <option value="Pahang"></option>
+                        <option value="Perak"></option>
+                        <option value="Perlis"></option>
+                        <option value="Penang"></option>
+                        <option value="Sabah"></option>
+                        <option value="Sarawak"></option>
+                        <option value="Terengganu"></option>
+                    </datalist>
+
+                    <label for="Zip">ZIP / Postal Code</label>
+                    <input id="Zip" type="text" maxlength="5" />
+                    <!-- Address End ==-->
+
+                    <label for="Email">Email <span class="textred">*</span></label>
+                    <input id="Email" type="email" placeholder="example@example.com" required/>
+
+                    <label for="Phone">Phone No. <span class="textred">*</span></label>
+                    <input id="Phone" type="number" placeholder="nnn-nnnnnnn" required/>
+                </fieldset>            
+
+                <!-- Credit Card -->
+                <fieldset id="creditCard">
+                    <legend>Credit Card</legend>
+        
+                       <input id="c1" type="radio" value="amex" name="cardType"/>
+                       <label for="c1"><img src="img/icon/amex.png" alt="amex"/></label>
+        
+                       <input id="c2" type="radio" value="discover" name="cardType"/>
+                       <label for="c2"><img src="img/icon/discover.png" alt="discover"/></label>
+        
+                       <input id="c3" type="radio" value="master" name="cardType"/>
+                       <label for="c3"><img src="img/icon/master.png" alt="master"/></label>
+        
+                       <input id="c4" type="radio" value="visa" name="cardType"/>
+                       <label for="c4"><img src="img/icon/visa.png" alt="visa"/></label>
+                 </fieldset>
+                
+                <fieldset class="f_CreditCardInfo">
+                    <!--
+                    <legend>Credit Card</legend>
+                    
+                    <label for="CardType">Card Type <span class="textred">*</label>
+                    <select id="cardType">
+                        <option value="" disabled selected hidden></option>
+                        <option value="VISA">VISA</option>
+                        <option value="MASTER">MASTER</option>
+                    </select>
+                    -->
+                    <label for='CardNo'>Credit Card No. <span class="textred">*</span></label>
+                    <input id='CardNo' type='number' required />
+                    <!-- 
+                        Credit Card Pattern
+                        pattern="^(?:4[0-9]{12}(?:[0-9]{3})?|5[1-5][0-9]{14}|6(?:011|5[0-9][0-9])[0-9]{12}|3[47][0-9]{13}|3(?:0[0-5]|[68][0-9])[0-9]{11}|(?:2131|1800|35\d{3})\d{11})$" 
+                    -->
+                    
+                    <label>Expiration Date <span class="textred">*</span></label>
+                    <select id="monthList" required>
+                        <optgroup label="Month">
+                                <option  hidden unselected></option>
+                                <option value="1">January (01)</option>
+                                <option value="2">February (02)</option>
+                                <option value="3">March (03)</option>
+                                <option value="4">April (04)</option>
+                                <option value="5">May (05)</option>
+                                <option value="6">June (06)</option>
+                                <option value="7">July (07)</option>
+                                <option value="8">October (08)</option>
+                                <option value="9">September (09)</option>
+                                <option value="10">October (10)</option>
+                                <option value="11">November (11)</option>
+                                <option value="12">December (12)</option>
+                        </optgroup>
+                    </select>
+
+                    <select id="yearList" required>
+                        <optgroup label="Year">
+                            <option  hidden unselected></option>
+                            <option value="2020">2020</option>
+                            <option value="2021">2021</option>
+                            <option value="2022">2022</option>
+                            <option value="2023">2023</option>
+                            <option value="2024">2024</option>
+                            <option value="2025">2025</option>
+                        </optgroup>
+                    </select>
+
+                    <label>CSC</label>
+                        <input maxlength="3" placeholder="nnn" pattern="^\d{3}$" />
+                </fieldset>
+
+                <!-- Order Info -->
+                <fieldset class="f_OrderInfo">
+
+                    <legend>Order Detial</legend>
+            
+                    <div id="order">
+                        <label for="Product">Product</label>
+                        <select id="Product">
+                            <optgroup label="Mousse Cake" >
+                                <option value="" hidden unselected></option>
+                                <option value="" >Chocolate Mango Mousse Cake</option>
+                                <option value="" >Chocolate Mousse Cake</option>
+                                <option value="" >Gold Kiwi Mousse Cake</option>
+                                <option value="" >Dragon Fruits Mousse Cake</option>
+                                <option value="" >Kiwi Mousse Cake</option>
+                                <option value="" >Passion Fruit Mango Mousse Cake</option>
+                                <option value=""  disabled></option>
+                            </optgroup>
+                            <optgroup label="Cheesecake" >
+                                <option value="" >Blueberry Cheesecake</option>
+                                <option value="" >Candy Chocolate Cheesecake</option>
+                                <option value="" >Carrot Cheesecake</option>
+                                <option value="" >Chocolate Coffee Cheesecake</option>
+                                <option value="" >Durian Cheesecake</option>
+                                <option value="" >Green Tea Cheesecake</option>
+                                <option value="" >Oreo Cheesecake</option>
+                                <option value="" >Mango Cheescake</option>
+                                <option value="" >Marble Cheesecake</option>
+                                <option value="" >Passionfruit Cheesecake</option>
+                                <option value="" >Pitted Cherry Cheesecake</option>
+                                <option value="" >Raspberry Cheesecake</option>
+                                <option value="" >Strawberry Cheesecake</option>
+                                <option value=""  disabled></option>
+                            </optgroup>
+                            <optgroup label="Bread">
+                                <option value="" >Cheddar Cheese Bread</option>
+                                <option value="" >Croissants</option>
+                                <option value="" >Doughnuts</option>
+                                <option value="" >Green Tea Red Bean Buns</option>
+                                <option value="" >Pumpkin Bread</option>
+                                <option value="" >Sandwich Croissants</option>
+                                <option value="" >Sweet Potato Buns</option>
+                                <option value="" >Sweet Potato Crown</option>
+                                <option value="" >Wholemeal Sardine Buns</option>
+                                <option value=""  disabled></option>
+                            </optgroup>
+                            <optgroup label="Other">
+                                <option value="" >Banana Chocolate Cake</option>
+                                <option value="" >Banana Whole Wheat Cake</option>
+                                <option value="" >Blueberry Chocolate Cake</option>
+                                <option value="" >Blueberry Oreo Cake</option>
+                                <option value="" >Chocolate Fudge Cake</option>
+                                <option value="" >Christmas Log Cakes</option>
+                                <option value="" >England Fruit Cake</option>
+                                <option value="" >Fresh Fruits Cake</option>
+                                <option value="" >Mickey Mouse Chocolate Cake</option>
+                                <option value="" >M & M Birthday Cake</option>
+                                <option value="" >Peach Chocolate Cake</option>
+                                <option value="" >Strawberry Chocolate Cake</option>
+                                <option value=""  disabled></option>
+                            </optgroup>
+                            
+
+                        </select>
+
+                        <label for="Quantity">Quantity</label>
+                        <input id="Quantity" type="number" min="1"/>
+                    </div>
+
+                    <!-- More Order Button -->
+                    <button class="amo" type="button" onclick="AddMoreOrder()">Add More Order</button>
+
+                    <script>
+                        function AddMoreOrder() { 
+                            document.getElementById("order").innerHTML +=  
+                            "<label for='Product'>Product</label><select id='Product'><optgroup label='Mousse Cake' ><option  hidden unselected></option><option >Chocolate Mango Mousse Cake</option><option >Chocolate Mousse Cake</option><option >Gold Kiwi Mousse Cake</option><option >Dragon Fruits Mousse Cake</option><option >Kiwi Mousse Cake</option><option >Passion Fruit Mango Mousse Cake</option><option disabled></option></optgroup><optgroup label=Cheesecake><option >Blueberry Cheesecake</option><option >Candy Chocolate Cheesecake</option><option >Carrot Cheesecake</option><option >Chocolate Coffee Cheesecake</option><option >Durian Cheesecake</option><option >Green Tea Cheesecake</option><option >Oreo Cheesecake</option><option >Mango Cheescake</option><option >Marble Cheesecake</option><option >Passionfruit Cheesecake</option><option >Pitted Cherry Cheesecake</option><option >Raspberry Cheesecake</option><option >Strawberry Cheesecake</><option  disabled></option></optgroup><optgroup label='Bread'><option >Cheddar Cheese Bread</option><option >Croissants</option><option >Doughnuts</option><option >Green Tea Red Bean Buns</option><option >Pumpkin Bread</option><option >Sandwich Croissants</option><option >Sweet Potato Buns</option><option >Sweet Potato Crown</option><option >Wholemeal Sardine Buns</option><option  disabled></option></optgroup><optgroup label='Other'><option >Banana Chocolate Cake</option><option >Banana Whole Wheat Cake</option><option >Blueberry Chocolate Cake</option><option >Blueberry Oreo Cake</option><option >Chocolate Fudge Cake</option><option >Christmas Log Cakes</option><option >England Fruit Cake</option><option >Fresh Fruits Cake</option><option>Mickey Mouse Chocolate Cake</option><option >M & M Birthday Cake</option><option >Peach Chocolate Cake</option><option >Strawberry Chocolate Cake</option><option  disabled></option></optgroup></select><label for='Quantity'>Quantity</label><input id='Quantity' type='number' min='1'/>"; 
+                        } 
+                    </script>
+                </fieldset>               
+
+                <fieldset class="btn">
+                    <button id="OrderNow" type="submit">ORDER NOW</button>
+                </fieldset>
+
+            </form>
+        </section>
+
+        <footer>
+            <p>MIMI Bakery &copy; 2020</p>
+        </footer>
+    </body>
+</html>

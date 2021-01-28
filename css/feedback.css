@@ -1,0 +1,209 @@
+
+    /** HOME Style **/
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        background-color: white;
+        background-image: url("../img/bg.jpg");
+        /*https://image.freepik.com/free-vector/sweet-pastry-seamless-pattern-illustration-cakes-bakery-pastry-pastry-dessert-background-with-sweet-cake-vanilla-cream-cupcake-caramel-muffin-chocolates-donut_109709-594.jpg*/
+        font-family: Helvetica, Arial, sans-serif;
+        display: block;
+        text-align: center;
+        min-width: 501px;
+    }
+
+    /** Header **/
+
+    header {
+        background-color: rgb(63, 33, 9);
+        position: fixed;
+        width: 100%;
+        height: 80px;
+        z-index: 520;
+    }
+
+    .logo img{
+        width: 100px;
+        position: fixed;
+        top: 10px;
+        left: 3%;
+        float: left;
+    }
+
+    a.profile {
+        color: white;
+        position: fixed;
+        top: 30px;
+        right: 20px;
+        text-decoration: none;
+    }
+
+    .profile img {
+        width: 15px;
+        position: fixed;
+        top: 30px;
+        right: 80px;
+    }
+
+    header nav {
+        position: relative;
+        top: 38%;
+    }
+
+    header li {
+        display: inline-block;
+    }
+
+    header nav a {
+        list-style-type: none;
+        text-decoration: none;
+        padding: 5px 10px;
+        color: rgba(255, 255, 255);
+    }
+
+    /** Section **/
+
+    section {
+        background-color: #f3f3f2;
+        margin: 0 auto;
+        width: 78%;
+        height: 100%;
+        padding: 40px;
+        text-align: center;
+    }
+
+    section img {
+        margin-bottom: 20px;
+        width: 100%;
+        box-shadow: inset 0 0 3em rgba(0,0,0,0.1), 
+                    0.3em 0.3em 1em rgba(0,0,0,0.3);
+    }
+
+    h2 {
+        color: rgb(148, 68, 15);
+        font-size: 2em;
+        margin-top: 20px;
+        text-align: left;
+        padding-bottom: 6px;
+    }
+
+    span.textred {
+        color: red;
+    }
+
+    /** Form Style **/    
+
+    form {
+        height: 100%;
+    }
+    
+    fieldset {
+        border: none;
+        padding-bottom: 30px;
+    }
+    
+    legend {
+        background-color: rgba(163, 121, 95, 0.959);
+        color: rgb(249, 255, 198);
+        /*
+        color: rgba(255, 255, 255, 0.856);
+        border-radius: 10px;
+        padding: 8px;
+        */
+        font-size: 1.5em;
+        border-bottom: 1px solid rgb(155, 104, 104);
+        width: 98%;
+        margin-bottom: 30px;
+        padding: 10px;
+
+    }
+    
+    
+    /* Input and Label Styles */
+    
+    fieldset#feedback > label {
+        float: left;
+        clear: left;
+        width: 40%;
+        text-align: right;
+        margin-right: 10px;
+        margin-bottom: 10px;
+        font-weight: bolder;
+    }
+
+    input, textarea {
+        float: left;
+        width: 220px;
+    }
+    
+    textarea {
+        margin-bottom: 10px;
+        max-width: 300px;
+        max-height: 400px;
+    }
+
+    fieldset.optionGroup label {
+        float: left;
+    }
+
+
+
+    /* Feedback Type Styles */
+
+    input[type='radio'] {
+        float: left;
+        clear: left;
+        width: 12px;
+        margin-right: 10px;
+        margin-bottom: 20px;
+        position: relative;
+        top: 2px;
+
+    }
+
+    
+ 
+
+    /** Button Style **/
+
+    button {
+        padding: 15px 20px;
+        font-weight: bold;
+        background-color: rgb(207, 131, 31);
+        color: white;
+    }
+
+
+    /** Validation **/
+
+    input:not([type = "radio"]):focus {
+        background-color: rgb(165, 226, 255);
+    }
+     
+    input:not([type = "radio"]):focus:valid {
+        background: url(sb_valid.png) bottom right no-repeat;
+        background-color: rgb(215, 255, 215);
+    }
+     
+    input:not([type = "radio"]):focus:invalid {
+        background: url(sb_invalid.png) bottom right no-repeat;
+        background-color: rgb(255, 245, 215);
+    }
+
+    /** Footer **/
+
+    footer {
+        background-color: rgb(63, 33, 9);
+        width: 100%;
+        height: 40px;
+        color: rgb(155, 155, 155);
+    }
+    
+    footer p {
+        position: relative;
+        top: 28%;
+    }
+    
