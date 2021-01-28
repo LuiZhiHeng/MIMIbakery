@@ -1,2 +1,3 @@
-# MIMIbakery
-AI 2020A project (front-end) (landing page)
+# MIMI Bakery
+
+Live Prview: https://luizhiheng.github.io/MIMIbakery/
